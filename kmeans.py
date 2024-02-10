@@ -6,10 +6,6 @@ import re
 from typing import Callable, Dict, List, Tuple, TypeVar, DefaultDict
 from util import *
 
-FeatureVector = Dict[str, int]
-WeightVector = Dict[str, float]
-Example = Tuple[FeatureVector, int]
-
 
 def compute_distance(example1, example2):
     # Compute the Euclidean distance between two sparse vectors (string-to-float dictionaries)
@@ -30,7 +26,7 @@ def kmeans(
     """
     examples: list of examples, each example is a string-to-float dict representing a sparse vector.
     K: number of desired clusters. Assume that 0 < K <= |examples|.
-    maxEpochs: maximum number of epochs to run (you should terminate early if the algorithm converges).
+    maxEpochs: maximum number of epochs to run (terminates early if the algorithm converges).
     Return: (length K list of cluster centroids,
             list of assignments (i.e. if examples[i] belongs to centers[j], then assignments[i] = j),
             final reconstruction loss)
