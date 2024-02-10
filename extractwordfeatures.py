@@ -7,9 +7,6 @@ from typing import Callable, Dict, List, Tuple, TypeVar, DefaultDict
 from util import *
 
 FeatureVector = Dict[str, int]
-WeightVector = Dict[str, float]
-Example = Tuple[FeatureVector, int]
-
 
 def extractWordFeatures(x: str) -> FeatureVector:
     """
