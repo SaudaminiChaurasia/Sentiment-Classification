@@ -2,10 +2,6 @@
 
 import random
 import math
-import re
-from typing import Callable, Dict, List, Tuple, TypeVar, DefaultDict
-from util import *
-
 
 def compute_distance(example1, example2):
     # Compute the Euclidean distance between two sparse vectors (string-to-float dictionaries)
